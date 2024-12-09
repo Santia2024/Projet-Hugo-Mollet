@@ -1,0 +1,451 @@
+﻿<Window x:Class="OrthoPrinter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrthoPrinter"
+        mc:Ignorable="d"
+        Title="Ortho Printer App" 
+        MinHeight="450" MinWidth="800"
+        SizeToContent="WidthAndHeight">
+    <TabControl>
+        <TabItem Header="Patient Document" FontSize="14" Background="#EFEFEF">
+        <DockPanel>
+        
+        <Grid DockPanel.Dock="Bottom" Margin="10">
+            <Button Name="SaveButton" Content="Save" Width="65" Height="30" Click="Save_Checked" FontSize="16" HorizontalAlignment="Right"/>
+        </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <GroupBox Grid.Column="0" Name="PatientGroup" Header="Personal Data" Margin="10" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="1" Grid.Column="0" Name="FirstNameLabel" Content="First Name" Margin="5"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Name="FirstNameBox" Width="200" Margin="5"/>
+                    <Label Grid.Row="2" Grid.Column="0" Name="LastNameLabel" Content="Last Name" Margin="5"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Name="LastNameBox" Width="200" Margin="5"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Column="1" Name="PatientArchsBox" Header="Patient Archs" Margin="10" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Row="0" Grid.Column="0" Margin="5" Stroke="Black" StrokeThickness="1" Width="40" Height="40"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="1" FontWeight="Bold" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Image Grid.Row="1" Grid.Column="0" Source="Images/Icons/right-arrow.png" Width="30"></Image>
+                        <Label Grid.Row="0" Grid.Column="1" Margin="5" Content="First Teeth to engage"/>
+                                <Label Grid.Row="1" Grid.Column="1" Margin="5" Content="Direction for next teeth to engage"/>
+                    </Grid>
+                    <GroupBox Header="Maxillary" Margin="10" Grid.Row="1">
+                        <Grid>
+                            <!-- Deux lignes dans le Grid pour contenir les StackPanel -->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Premier StackPanel -->
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryOneRadioButton" Tag="MaxillaryOne">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="Images/MAXILLARY/Maxillary_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                                    <Image.ToolTip>
+                                                        <Border BorderBrush="Gray" Background="White">
+                                                            <Image Source="Images/MAXILLARY/Maxillary_Tooltip_1.png" Width="500" Height="500" RenderOptions.BitmapScalingMode="HighQuality" />
+                                                        </Border>
+                                                    </Image.ToolTip>
+                                                </Image>
+                                    </StackPanel>
+                                    </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                               
+                                <Border Margin="20"><Viewbox >
+                                        <RadioButton Name="MaxillaryTwoRadioButton" Tag="MaxillaryTwo">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_2.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality">
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_2.png" Width="500" Height="500" RenderOptions.BitmapScalingMode="HighQuality" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryThreeRadioButton" Tag="MaxillaryThree">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_3.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_3.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryFourRadioButton" Tag="MaxillaryFour">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_4.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_4.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryFiveRadioButton" Tag="MaxillaryFive">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_5.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_5.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillarySixRadioButton" Tag="MaxillarySix">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_6.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_6.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillarySevenRadioButton" Tag="MaxillarySeven">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_7.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_7.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryEightRadioButton" Tag="MaxillaryEight">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_8.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_8.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryNineRadioButton" Tag="MaxillaryNine">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_9.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_9.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryTenRadioButton" Tag="MaxillaryTen">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_10.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_10.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MaxillaryElevenRadioButton" Tag="MaxillaryEleven">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MAXILLARY/Maxillary_11.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MAXILLARY/Maxillary_Tooltip_11.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Mandibular" Margin="10" Grid.Row="2">
+                        <Grid>
+                            <!-- Deux lignes dans le Grid pour contenir les StackPanel -->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Premier StackPanel -->
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularOneRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/MANDIBULAR/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/MANDIBULAR/Mandibular_Tooltip_1.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularTwoRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_2.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_2.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularThreeRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_3.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularFourRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_4.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularFiveRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_5.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularSixRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_6.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularSevenRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_7.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularEightRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_8.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularNineRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_9.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularTenRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_10.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                        </RadioButton>
+                                    </Viewbox>
+                                </Border>
+                                <Border Margin="20">
+                                    <Viewbox >
+                                        <RadioButton Name="MandibularElevenRadioButton" Tag="MandibularOne">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Images/Mandibular/Mandibular_1.png" Width="50" Height="50" Margin="5" RenderOptions.BitmapScalingMode="HighQuality" >
+                                            <Image.ToolTip>
+                                                <Border BorderBrush="Gray" Background="White">
+                                                    <Image Source="Images/Mandibular/Mandibular_Tooltip_11.png" Width="500" Height="500" />
+                                                </Border>
+                                            </Image.ToolTip>
+                                        </Image>
+                                    </StackPanel>
+                                </RadioButton>
+                                </Viewbox>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+
+
+
+                </Grid>
+            </GroupBox>
+
+
+
+
+
+            </Grid>
+    </DockPanel>
+        </TabItem>
+        <TabItem Header="SI treatment" FontSize="14" Background="#EFEFEF">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="ChangeInliner_Label" Content="Change InLiner: Every" />
+                    <TextBox Name="ChangingTurnOver" Text="7" Width="50" />
+                    <Label Name="Days_Label" Content="days" />
+
+                </StackPanel>
+
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+    
+
+</Window>

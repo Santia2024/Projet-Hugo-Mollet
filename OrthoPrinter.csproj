@@ -1,0 +1,203 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Icons\arrow1.png" />
+    <None Remove="Images\Icons\right-arrow.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_1.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_10.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_11.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_2.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_3.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_4.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_5.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_6.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_7.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_8.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_9.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_1.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_10.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_11.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_2.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_3.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_4.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_5.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_6.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_7.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_8.png" />
+    <None Remove="Images\MANDIBULAR\Mandibular_Tooltip_9.png" />
+    <None Remove="Images\MAXILLARY\Image2.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_1.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_10.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_11.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_111.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_2.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_3.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_4.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_5.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_6.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_7.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_8.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_9.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_1.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_10.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_11.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_2.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_3.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_4.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_5.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_6.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_7.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_8.png" />
+    <None Remove="Images\MAXILLARY\Maxillary_Tooltip_9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Icons\arrow1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icons\right-arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MANDIBULAR\Mandibular_Tooltip_9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MAXILLARY\Maxillary_Tooltip_9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
