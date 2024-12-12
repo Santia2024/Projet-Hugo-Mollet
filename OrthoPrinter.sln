@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrthoPrinter", "OrthoPrinter.csproj", "{9AF801B2-6A88-4285-8686-5C418D1A552D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InTeethDocumentPrinter", "..\inteeth-document-printer\InTeethDocumentPrinter.csproj", "{B9E78735-CD1E-4FBF-9C51-EA9202A2A929}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9AF801B2-6A88-4285-8686-5C418D1A552D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AF801B2-6A88-4285-8686-5C418D1A552D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AF801B2-6A88-4285-8686-5C418D1A552D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E78735-CD1E-4FBF-9C51-EA9202A2A929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E78735-CD1E-4FBF-9C51-EA9202A2A929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E78735-CD1E-4FBF-9C51-EA9202A2A929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E78735-CD1E-4FBF-9C51-EA9202A2A929}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
